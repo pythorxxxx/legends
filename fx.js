@@ -37,7 +37,7 @@ DONE : FENIX BOT Connected PYTHOR SAMA
 });
 client.on('ready', () => {
     console.log('Bot Is Ready Now !');
-    client.user.setGame(`FENIX SERVER SOON `,"http://twitch.tv/pythorxxx")
+    client.user.setGame(`LD - Legends Dead `,"http://twitch.tv/pythorxxx")
     });
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -58,7 +58,7 @@ client.on('ready', () => {
 	
 	
 	
-	const devs = ["326099411853901824"]
+	const devs = ["486141054677155860"]
  
 const adminprefix =  "-";
 client.on('message', message => {
@@ -247,7 +247,7 @@ msg.delete();
 	client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(`https://cdn.pg.sa/SJy1pniCcs.gif 
-**!..Welcome To Fenix Server**  :rose::revolving_hearts:
+**!..Welcome To LD - Legends Dead Server**  :rose::revolving_hearts:
 ${member}`) 
 }).catch(console.error)
 })
@@ -297,7 +297,7 @@ ${member}`)
 	
 client.on('message', message => {
             if (message.content === ',') {
-              message.channel.send('**Weellcome To Fenix Server HaveFun.!** :beers:');
+              message.channel.send('**Weellcome To LD - Legends Dead Server HaveFun.!** :beers:');
               message.channel.sendFile("./fx.gif");
                
 
@@ -463,7 +463,7 @@ message.channel.send(id)
         let embed = new Discord.RichEmbed()
         .setAuthor(`-#| ${message.author.username} |#-`, message.author.avatarURL)      
         .setTitle(`:small_orange_diamond:Click Here.. !`)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=523242443076927498&permissions=1207430593&scope=bot`)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=529213580139167764&permissions=8&scope=bot`)
         .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")
         .addField(':small_blue_diamond:Byـ:', "<@" + message.author.id + ">")        
      message.channel.sendEmbed(embed);
@@ -769,7 +769,7 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO FENIX BOT`` ')
+            .setTitle('``INFO LD - Legends Dead BOT`` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``servers``', [client.guilds.size], true)
@@ -1005,113 +1005,7 @@ if(!message.channel.guild) return;
 
 	
 	
-	
-	client.on('guildMemberAdd', member => {
-     const welcomer =  member.guild.channels.find('name', 'fenix');
-const w = ['./w1.png'];
- 
-         let Image = Canvas.Image,
-            canvas = Canvas.createCanvas(1182,394),
-            ctx = canvas.getContext('2d');
-        fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
-            if (err) return console.log(err);
-            let BG = Canvas.Image;
-            let ground = new Image;
-            ground.src = Background;
-            ctx.drawImage(ground, 0, 0, 1182, 394);
-             
-         
- 
-                let url = member.user.displayAvatarURL.endsWith(".webp") ? member.user.displayAvatarURL.slice(100) + ".png" : member.user.displayAvatarURL;
-                jimp.read(url, (err, ava) => {
-                    if (err) return console.log(err);
-                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
-                        if (err) return console.log(err);
-                       
-                        ctx.font = "bold 40px Arial";
-                        ctx.fontSize = '300px';
-                        ctx.fillStyle = "#f1f1f1";
-                        ctx.textAlign = "center";
-                       
-                        ctx.font = "bold 40px Arial";
-                        ctx.fontSize = '300px';
-                        ctx.fillStyle = "#f1f1f1";
-                        ctx.textAlign = "center";
-                        ctx.fillText(member.user.username, 950, 208);
- 
-                let Avatar = Canvas.Image;
-                              let ava = new Avatar;
-                              ava.src = buf;
-                              ctx.beginPath();  /خط/
-                              ctx.arc(587, 197, 160, 0, Math.PI*2);
-                              ctx.stroke();
-                                 ctx.clip();                 /عرض/
-                                 ctx.drawImage(ava, 425, 25, 330, 330);  
-                         
-               
-                             
-welcomer.sendFile(canvas.toBuffer())
- 
- 
- 
-     
-     
-                    }  )  
-     
-                   
 
-})
-      });                    
-});
-
-var dat = JSON.parse("{}");
-function forEachObject(obj, func) {
-    Object.keys(obj).forEach(function (key) { func(key, obj[key]) });
-}
-client.on("ready", () => {
-    var guild;
-    while (!guild)
-        guild = client.guilds.get("423857340173910017");
-    guild.fetchInvites().then((data) => {
-        data.forEach((Invite, key, map) => {
-            var Inv = Invite.code;
-            dat[Inv] = Invite.uses;
-        });
-    });
-});
-client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("423929653569257487");
-    if (!channel) {
-        console.log("ccccccccccccc erooooore");
-        return;
-    }
-    if (member.id == client.user.id) {
-        return;
-    }
-    console.log('id eroooooooooooooooore');
-    var guild;
-    while (!guild)
-        guild = client.guilds.get("423857340173910017");
-    guild.fetchInvites().then((data) => {
-        data.forEach((Invite, key, map) => {
-            var Inv = Invite.code;
-            if (dat[Inv])
-                if (dat[Inv] < Invite.uses) {
-                    setTimeout(function() {
- channel.send(`‎‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎‎‎ ‎**- You Are iN __Fenix__ Server Welcome HaveFun.!.:wilted_rose: **
-‎ ‎‎ ‎ ‎ ‎‎‎ ‎‎ ‎ ‎ ‎‎ ‎ ‎ ‎‎ ‎ ‎ ‎‎ ‎ ‎** - INVITED BY :**  ${Invite.inviter} `) ;
-                    },1500);
- }
-            dat[Inv] = Invite.uses;
-       
-       });
-    });
-});
-	
-	
-	
-	
-	
 	
 	
 	
